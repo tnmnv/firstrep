@@ -1,42 +1,35 @@
-document.addEventListener('DOMContentLoaded', () =>{
- 
+document.addEventListener('DOMContentLoaded', ()=>{
 
-    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-    /*for (let i=0; i<arr.length; i++){
-        console.log(arr[i]);
-    }*/
-
-    /*let i=0;
-    while(i < arr.length){
-        console.log(arr[i])
-        i++;
-    }*/
-
-    /*let i=0;
-     do{
-        console.log(arr[i])
-        i++;}
-    while(i < arr.length)*/
-
-   /* for (let i in arr){
-        console.log(arr[i])
-    }*/
     
-    /*let i ;
-    for (i of arr){
-        console.log(i)
-    }*/
+    document.body.style.background="red";
 
-    /* arr.forEach(myFunc)
-    function myFunc(val){
-    console.log(val)
-    }*/
+    function chngColor(){
+    document.body.style.background="green";
+}
+    
+    setTimeout(chngColor, 3000);
 
-     
-     let myFunc = val => console.log(val)
-     arr.map(myFunc)
+    document.querySelector("#btn").addEventListener('click', ()=>{
+        document.body.style.background="orange";
+    })
 
-     let alta_metoda = arr.join();
-     console.log(alta_metoda)
-}) 
+      let ol = document.querySelector('#ol');
+     function set_li (){
+        for (let i=1; i<=20; i++){
+            
+            
+          (i%2 == 0)?
+            ol.innerHTML+=`
+            <li style="color:green">Элемент ${i}</li>
+            `
+            :
+            ol.innerHTML+=`
+            <li style="color:purple">Элемент ${i}</li>
+            `
+        
+        }
+     }
+     set_li();
+    
+})
